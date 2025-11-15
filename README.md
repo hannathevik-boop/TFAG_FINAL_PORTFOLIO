@@ -20,24 +20,14 @@ Høyreklikk på index.html og velg “Open with Live Server”.
 Siden vil da åpnes automatisk i nettleseren.
 
 # Kjente begrensninger
-Porteføljen har ingen backend, så kontaktskjemaet fungerer ikke i denne prototypen.
 
-Nedlasting av CV og prosjekter er ikke aktivert.
-
-Ingen database er koblet til, så innholdet er statisk.
-
-Enkelte funksjoner som sticky elementer og animasjoner er ikke ferdig implementert.
-
-Full responsivitet er under utvikling og kan variere mellom enheter.
+Ingen kjente begrensninger. 
 
 # Fremtidige forbedringer
-Implementere backend for kontaktskjema med Formspree eller Netlify Forms.
 
 Legge til nedlastbare versjoner av CV og prosjekter.
 
-Utvide prosjektseksjonen med filterfunksjon og “Neste prosjekt”-navigasjon / nye sider.
-
-Optimalisere mobilvisning med sticky kontaktknapp og “Til toppen”-funksjon.
+Utvide prosjektseksjonen.
 
 Legge til mikrointeraksjoner og subtile animasjoner for bedre visuell dynamikk.
 
