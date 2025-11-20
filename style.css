@@ -15,8 +15,8 @@ body, html {
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fdfdfd;
-  color: #333;
+  background: #F4F7F2;
+  color: #131313;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -33,7 +33,7 @@ header {
   color: #000;
   text-align: center;
   padding: 2rem 1rem;
-  height: 650px;
+  height: 600px;
 }
 
 .nav-header {
@@ -42,11 +42,12 @@ header {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: right; 
   gap: 2rem;
   padding: 1rem 2rem;
   z-index: 1000;
   background: transparent;
+  color: #131313;
 }
 
 .nav-header::before {
@@ -56,11 +57,12 @@ header {
   left: 0;
   width: 100%;
   height: 80%;
-  background: #F4F7F2;
+  background: #131313;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
   z-index: -1;
   pointer-events: none;
+  
 }
 
 .nav-header.scrolled::before {
@@ -82,9 +84,10 @@ header {
   margin: 0;
 }
 
+
 .nav-menu a {
   text-decoration: none;
-  color: #333;
+  color: #131313; 
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -92,10 +95,13 @@ header {
   transition: color 0.5s ease, font-weight 0.5s ease;
 }
 
+.nav-header.scrolled .nav-menu a {
+  color: #fff; 
+}
 .nav-menu a:hover {
   font-weight: 550;
   transform: scale(1.05);
-  color: #000;
+  color: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -111,7 +117,7 @@ header {
 .head-contact a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: #333;
+  color: #131313;
   margin-top: -1rem;
 }
 
@@ -133,12 +139,12 @@ header {
 }
 
 .header-image img {
-  width: 140%;
-  max-width: 700px;
+  width: 130%;
+  max-width: 600px;
   height: auto;
   object-fit: cover;
   border-radius: 0;
-  margin-top: -4rem;
+  margin-top: 0rem;
   margin-right: -1rem;
 }
 
@@ -149,7 +155,7 @@ header {
     left: 0;
     width: 50vw;
     height: 70vh;
-    background: #F4F7F2;
+    background: #131313;
     padding: 2rem;
     flex-direction: column;
     gap: 1rem;
@@ -184,14 +190,26 @@ header {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #333;
+    color: #ffff;
     cursor: pointer;
     position: absolute;
     top: 0;
     left: 1rem;
     z-index: 1001;
   }
-
+.hamburger,
+.nav-menu a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-header:not(.scrolled) .hamburger,
+.nav-header:not(.scrolled) {
+  color: #131313; 
+}
+.nav-header.scrolled .hamburger,
+.nav-header.scrolled .nav-menu a {
+  color: #fff;
+}
   .nav-header.show .hamburger {
     display: none;
   }
@@ -206,7 +224,7 @@ header {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #333;
+    color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 1002;
@@ -222,7 +240,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #333;
+    color: #F4F7F2;
   }
 
   .nav-header.show .close-menu {
@@ -302,12 +320,11 @@ header {
     display: flex; 
     flex-direction: column; 
     align-items: left; 
-    width: 50%;
+    width: 65%;
   } 
   .entry-header { 
     flex-direction: column; 
     align-items: left; 
-    padding: 2 20rem; 
     display: flex; 
     margin-left: -2rem;
     width: 100%;
@@ -317,10 +334,10 @@ header {
     text-align: right; 
   } 
   .header-image img { 
-    width: 100%; 
+    width: 80%; 
     max-width: 100%; 
-    margin-top: -3rem; 
-    margin-right: -3rem;
+    margin-top: -1.3rem; 
+    margin-right: -2rem;
    } 
    .head-contact { 
     font-size: 1.2rem; 
@@ -365,9 +382,10 @@ header {
   justify-content: center;
   gap: 2rem;
   margin: 0;
-  max-width: 1500px;
+  max-width: 1550px;
   padding: 2rem;
   background-color: #131313;
+  color: #fff;
 }
 
 .portfolio-item {
@@ -376,12 +394,12 @@ header {
   flex: 1 1 300px;
   max-width: 520px;
   margin-top: 0;
-  background-color: #fff;
-  border-radius: 0;
+  background-color: #131313;
   overflow: visible;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 1px solid #fff;
 }
 
 .portfolio-item:hover {
@@ -423,18 +441,39 @@ header {
   text-align: left;
   margin-top: -2rem;
   margin-bottom: 0;
+  color: #fff;
+  
 }
+.portfolio-heading {
+  display: flex;
+  background-color: #131313;
 
+
+  }
 .portfolio-heading h2 {
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 4rem;
   margin-left: 3rem;
   margin-right: 2rem;
-  border-bottom: 1px solid black;
+  color: #fff;
 }
+.portfolio-heading h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #131313;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.om h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #131313;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-
+}
 @media (max-width: 768px) {
   .caption h2 {
     font-size: 2rem;
@@ -463,51 +502,41 @@ header {
   font-weight: 500;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 .caption p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  color: #444;
+  color: #fff;
   font-family: 'Darker Grotesque';
 }
 .about {
   display: flex;
   flex-wrap: wrap;
   font-family: 'Darker Grotesque';
-  margin-top: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 2rem;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 1px solid black;
 }
 
 .about-left {
   flex: 1 1 50%;
-  background-color: #fff;
-  color: #333;
-  padding: 2rem;
+  background: #F4F7F2;
+  border-right: 1px solid black;
+  color: #131313;
+  padding: 1rem;
   box-sizing: border-box;
   text-align: left;
-  margin-left: 0;
 }
 
 .about-right {
-  flex: 1 1 44%;
-  background: radial-gradient(circle, rgba(174, 238, 202, 1) 0%, rgba(148, 172, 233, 1) 100%);
-  color: #000;
-  padding: 2rem;
+  flex: 1 1 50%;
+  background: #F4F7F2;
+  color: #131313;
+  padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  padding-right: 2rem;
-}
-
-.about-heading h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-left: 3rem;
-  margin-right: 2rem;
-  border-bottom: 1px solid black;
 }
 
 .about h2 {
@@ -517,7 +546,6 @@ header {
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-  margin-left: 1rem;
 }
 
 .about p {
@@ -526,14 +554,14 @@ header {
   margin: 1rem;
   font-family: 'Darker Grotesque';
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .entries {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .entry {
@@ -546,7 +574,7 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   min-width: 120px;
-  color: #000;
+  color: #333;
 }
 
 .content p {
@@ -590,6 +618,7 @@ header {
   .about-right {
     padding: 2rem;
     width: 50%;
+    border-top: 1px solid #000;
   }
 
   .entry {
@@ -607,6 +636,9 @@ header {
   .content {
     padding-left: 0;
   }
+  .about-left {
+  border-right: 0px solid black;
+}
 }
 
 .footer-split {
@@ -614,11 +646,12 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   font-family: 'Darker Grotesque';
-  margin-top: 4rem;
   max-width: 100%;
   overflow-wrap: break-word;
   position: relative;
-  background: radial-gradient(circle, rgba(174, 238, 202, 1) 0%, rgba(148, 172, 233, 1) 100%);
+  background: #F4F7F2;
+  border: 1px solid black;
+  color: #3333;
 }
 
 .footer-left,
@@ -638,8 +671,8 @@ header {
 
 .footer-right {
   flex: 0 0 50%;
-  color: #333;
-  padding: 4rem;
+  color:#F4F7F2;
+  padding: 5rem;
   box-sizing: border-box;
   text-align: center;
   padding-top: 10rem;
@@ -657,6 +690,7 @@ header {
   margin-bottom: 2rem;
   font-family: 'Darker Grotesque';
   overflow-wrap: break-word;
+  color: #131313;
 }
 
 .footer-left form {
@@ -667,7 +701,6 @@ header {
   width: 100%;
   max-width: 100%;
   padding-left: 1rem;
-  padding-bottom: 2rem;
 }
 
 .footer-left .form-group {
@@ -688,7 +721,7 @@ header {
   box-sizing: border-box;
   border: 1px solid #000;
   border-radius: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: 'Darker Grotesque';
 }
 
@@ -718,14 +751,15 @@ header {
   margin-bottom: 0.5rem;
   text-align: right;
   padding-right: 1rem;
+  color: #131313;
 }
 
 .footer-right h3 {
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  padding-right: 2rem;
   text-align: left;
+  color: #131313;
 }
 
 .footer-right h2:hover,
@@ -740,11 +774,10 @@ header {
   width: 100%;
   margin: 0;
   padding: 1rem;
-  background: radial-gradient(circle, rgba(174, 238, 202, 1) 0%, rgba(148, 172, 233, 1) 100%);
-  color: #000;
+  background: #131313;
+  color: #F4F7F2;
   box-sizing: border-box;
   text-align: left;
-  border-top: 1rem solid #fff;
 }
 
 .footer-last h2 {
@@ -781,7 +814,7 @@ header {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue';
-  color: #000;
+  color: #F4F7F2;
 }
 
 .thank-you-message {
@@ -825,18 +858,21 @@ header {
     margin: 0 auto;
     width: 100%;
   }
-
   .footer-right {
-  margin-bottom: -2rem;
-  padding-top: 1rem;
+    flex: 1 1 100%;       /* tar hele bredden i flex */
+    width: 100vw;         /* sikrer at den fyller hele skjermen */
+    border-top: 1px solid black;
+    padding: 2rem;        /* jevn padding */
+    box-sizing: border-box;
+    text-align: center;
+  }
 }
 .footer-right h2 {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  padding: 0rem;
   text-align: right; 
-  margin-right: -5rem;
+  margin-right: -1rem;
  width: auto;
 }
 
@@ -845,10 +881,10 @@ header {
   font-weight: 500;
   margin-bottom: 0.5rem;
   text-align: left; 
-  margin-left: -2rem;
+  margin-left: -0.5rem;
   line-height: 2.1rem;
   padding: 0rem;
 width: auto;
 white-space: nowrap;
-}
+
 }
