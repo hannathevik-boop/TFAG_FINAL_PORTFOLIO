@@ -837,9 +837,12 @@ header {
 }
 
 .thank-you-message a {
-  color: #444;
+  color: #131313;
   text-decoration: underline;
 }
+.thank-you-message h2 {
+  font-size: 2rem;
+  color: #131313;
 
 @media (max-width: 768px) {
   .footer-left form {
