@@ -843,7 +843,7 @@ header {
 .thank-you-message h2 {
   font-size: 2rem;
   color: #131313;
-
+}
 @media (max-width: 768px) {
   .footer-left form {
     max-width: 100%;
@@ -862,10 +862,10 @@ header {
     width: 100%;
   }
   .footer-right {
-    flex: 1 1 100%;       /* tar hele bredden i flex */
-    width: 100vw;         /* sikrer at den fyller hele skjermen */
+    flex: 1 1 100%;       
+    width: 100vw;         
     border-top: 1px solid black;
-    padding: 2rem;        /* jevn padding */
+    padding: 2rem;        
     box-sizing: border-box;
     text-align: center;
   }
