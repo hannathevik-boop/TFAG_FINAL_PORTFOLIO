@@ -766,7 +766,6 @@ header {
 .footer-right h3:hover,
 .footer-right h4:hover {
   transform: scale(1.02);
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
